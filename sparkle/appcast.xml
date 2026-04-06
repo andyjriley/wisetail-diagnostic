@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>WiseLync Diagnostic Viewer</title>
+		<link>https://github.com/andyjriley/wisetail-diagnostic</link>
+		<description>Sparkle appcast for WiseLync Diagnostic Viewer (wldiag inspector).</description>
+		<language>en</language>
+		<!--
+			Add each release as a new <item> above older items (newest first).
+			For each enclosure you must set:
+			- url: HTTPS URL of the update archive (e.g. a GitHub Release asset).
+			- length: byte size of the file on disk (sparkle sign_update prints this).
+			- sparkle:edSignature: output of Sparkle’s sign_update tool for that exact archive.
+		-->
+		<item>
+			<title>1.0.0</title>
+			<pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+			<sparkle:version>1</sparkle:version>
+			<sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+			<sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+			<sparkle:releaseNotesLink>https://github.com/andyjriley/wisetail-diagnostic/releases/tag/v1.0.0</sparkle:releaseNotesLink>
+			<enclosure
+				url="https://github.com/andyjriley/wisetail-diagnostic/releases/download/v1.0.0/Diagnostic-Viewer-1.0.0.zip"
+				sparkle:edSignature="REPLACE_WITH_SIGN_UPDATE_OUTPUT"
+				sparkle:installationType="archive"
+				length="0"
+				type="application/octet-stream"
+			/>
+		</item>
+	</channel>
+</rss>

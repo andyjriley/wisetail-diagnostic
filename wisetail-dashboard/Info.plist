@@ -7,8 +7,8 @@
 	<key>CFBundleName</key>
 	<string>Diagnostic Viewer</string>
 	<key>SUFeedURL</key>
-	<string>https://YOUR-SERVER.com/updates/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/andyjriley/wisetail-diagnostic/main/sparkle/appcast.xml</string>
 	<key>SUPublicEDKey</key>
-	<string>YOUR_PUBLIC_EDKEY_HERE</string>
+	<string>P5uNQVnJ3eyjAKi3Em6KlTjB/ZU5G6vwiSjlLpwxU50=</string>
 </dict>
 </plist>

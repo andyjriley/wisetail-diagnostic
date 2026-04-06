@@ -1,1 +1,6 @@
 .DS_Store
+
+# Sparkle EdDSA private key (export with Sparkle generate_keys -x); never commit.
+sparkle/sparkle-signing-private.key
+*.xcuserstate
+/wisetail-dashboard.xcodeproj/project.xcworkspace/xcuserdata/ariley.xcuserdatad/UserInterfaceState.xcuserstate
