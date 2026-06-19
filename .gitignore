@@ -4,5 +4,8 @@
 sparkle/sparkle-signing-private.key
 # Sparkle release archives (upload to GitHub Releases; do not commit).
 sparkle/*.zip
+# App Store Connect API keys; never commit.
+sparkle/*.p8
+*.p8
 *.xcuserstate
 /wisetail-dashboard.xcodeproj/project.xcworkspace/xcuserdata/ariley.xcuserdatad/UserInterfaceState.xcuserstate

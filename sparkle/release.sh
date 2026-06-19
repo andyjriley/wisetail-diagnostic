@@ -4,7 +4,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SCHEME="wisetail-dashboard"
-TEAM_ID="WSAL3K955T"
+TEAM_ID="V97S9BNJWU"
 ARCHIVE_PATH="/tmp/DiagnosticViewer.xcarchive"
 EXPORT_PATH="/tmp/DiagnosticViewer-export"
 STAGING="/tmp/diagnostic-viewer-release-staging"
@@ -28,13 +28,7 @@ if [[ -z "$SIGN_UPDATE" ]]; then
 fi
 
 if ! security find-identity -v -p codesigning | grep -q "Developer ID Application"; then
-  echo "ERROR: No Developer ID Application identity in Keychain." >&2
-  echo "" >&2
-  echo "Your Apple team (${TEAM_ID}) also needs cloud distribution certificate access." >&2
-  echo "In Xcode: Settings → Accounts → your team → Manage Certificates → + → Developer ID Application" >&2
-  echo "If that fails, ask your team's Account Holder to grant distribution certificate access," >&2
-  echo "or create a Developer ID Application cert at developer.apple.com and download it." >&2
-  exit 1
+  echo "NOTE: No local Developer ID identity in Keychain; using cloud signing via xcodebuild export." >&2
 fi
 
 echo "==> Archiving ${SCHEME}…"
