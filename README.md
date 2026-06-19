@@ -39,7 +39,13 @@ Unit and UI test targets are included (`wisetail-dashboardTests`, `wisetail-dash
 
 ### Distribution builds
 
-Release archives use **Hardened Runtime** and entitlements suitable for **Sparkle** auto-updates and **notarization**. When distributing outside the App Store, use **Developer ID** signing and follow Apple’s notarization workflow for the archived **Diagnostic Viewer** product.
+Release archives use **Hardened Runtime** and entitlements suitable for **Sparkle** auto-updates and **notarization**. When distributing outside the App Store you must:
+
+1. **Sign with Developer ID Application** (not “Apple Development”). Only a Developer ID–signed app can be opened by other Macs.
+2. **Notarize** the app with Apple (`notarytool`) and staple the ticket before packaging.
+3. **Package cleanly** — do not use `ditto -c` directly on DerivedData output; hidden `._` files in the zip break the code signature and macOS may block the app as malware. Use `sparkle/release.sh` or the staging + `zip -r -y -X` workflow documented there.
+
+`sparkle/release.sh` automates build, clean zip creation, and Sparkle archive signing once a Developer ID identity is installed in Keychain.
 
 ## Using the app
 
