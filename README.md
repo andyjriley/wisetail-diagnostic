@@ -45,7 +45,13 @@ Release archives use **Hardened Runtime** and entitlements suitable for **Sparkl
 2. **Notarize** the app with Apple (`notarytool`) and staple the ticket before packaging.
 3. **Package cleanly** — do not use `ditto -c` directly on DerivedData output; hidden `._` files in the zip break the code signature and macOS may block the app as malware. Use `sparkle/release.sh` or the staging + `zip -r -y -X` workflow documented there.
 
-`sparkle/release.sh` automates build, clean zip creation, and Sparkle archive signing once a Developer ID identity is installed in Keychain.
+`sparkle/release.sh` automates archive, Developer ID export, notarization, clean zip creation, and Sparkle archive signing once a Developer ID identity is installed in Keychain.
+
+If export fails with **“Cloud signing permission error”**, your Apple ID lacks access to create distribution certificates on team `WSAL3K955T`. Ask the team **Account Holder** to grant access in App Store Connect, or create a **Developer ID Application** certificate at [developer.apple.com](https://developer.apple.com/account/resources/certificates/list) and download it into Keychain. Then run:
+
+```bash
+sparkle/release.sh 1.0.0
+```
 
 ## Using the app
 
