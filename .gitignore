@@ -2,5 +2,7 @@
 
 # Sparkle EdDSA private key (export with Sparkle generate_keys -x); never commit.
 sparkle/sparkle-signing-private.key
+# Sparkle release archives (upload to GitHub Releases; do not commit).
+sparkle/*.zip
 *.xcuserstate
 /wisetail-dashboard.xcodeproj/project.xcworkspace/xcuserdata/ariley.xcuserdatad/UserInterfaceState.xcuserstate

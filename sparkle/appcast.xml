@@ -11,6 +11,7 @@
 			- url: HTTPS URL of the update archive (e.g. a GitHub Release asset).
 			- length: byte size of the file on disk (sparkle sign_update prints this).
 			- sparkle:edSignature: output of Sparkle’s sign_update tool for that exact archive.
+			- sparkle:installationType: only use "package" for archived pkg/mpkg updates; omit for .app zip updates.
 		-->
 		<item>
 			<title>1.0.0</title>
@@ -21,9 +22,8 @@
 			<sparkle:releaseNotesLink>https://github.com/andyjriley/wisetail-diagnostic/releases/tag/v1.0.0</sparkle:releaseNotesLink>
 			<enclosure
 				url="https://github.com/andyjriley/wisetail-diagnostic/releases/download/v1.0.0/Diagnostic-Viewer-1.0.0.zip"
-				sparkle:edSignature="REPLACE_WITH_SIGN_UPDATE_OUTPUT"
-				sparkle:installationType="archive"
-				length="0"
+				sparkle:edSignature="X8AnDxuwV2n/++qAxlGFe3fMH5KqnLqm/MLCaj4ik5TJjf3saZCpGC7r9N3p2f1AXba5JKk7F0NNWDINW/RiBA=="
+				length="5512623"
 				type="application/octet-stream"
 			/>
 		</item>
